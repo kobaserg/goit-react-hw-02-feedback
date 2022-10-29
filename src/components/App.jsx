@@ -16,21 +16,9 @@ export class App extends React.Component {
   };
 
   addStateFeedback = nameState => {
-    if (nameState === 'good') {
-      this.setState(prevState => ({
-        good: prevState.good + 1,
-      }));
-    }
-    if (nameState === 'neutral') {
-      this.setState(prevState => ({
-        neutral: prevState.neutral + 1,
-      }));
-    }
-    if (nameState === 'bad') {
-      this.setState(prevState => ({
-        bad: prevState.bad + 1,
-      }));
-    }
+    this.setState(prevState => ({
+      [nameState]: prevState[nameState] + 1,
+    }));
   };
 
   countTotalFeedback = () => {

@@ -2,10 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 import { theme } from './theme';
 
-export let totalGood = 0;
-export let totalNeutral = 0;
-export let totalBad = 0;
-
 const Button = styled.button`
   padding: ${theme.sizes.btnPadding};
   margin-right: 10px;
