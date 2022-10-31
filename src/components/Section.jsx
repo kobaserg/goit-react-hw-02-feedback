@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { theme } from './theme';
+import PropTypes from 'prop-types';
 
 const Title = styled.h1`
   font-size: ${theme.fontSizes.l};
@@ -12,4 +13,8 @@ const Title = styled.h1`
 
 export const Section = props => {
   return <Title>{props.title}</Title>;
+};
+
+Section.propTypes = {
+  props: PropTypes.object,
 };

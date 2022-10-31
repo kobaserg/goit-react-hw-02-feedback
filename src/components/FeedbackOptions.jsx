@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { theme } from './theme';
+import PropTypes from 'prop-types';
 
 const Btnbox = styled.div`
   display: flex;
@@ -39,4 +40,8 @@ export const FeedbackOptions = ({ option }) => {
       </Button>
     </Btnbox>
   );
+};
+
+FeedbackOptions.propTypes = {
+  option: PropTypes.object,
 };

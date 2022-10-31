@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from './theme';
+import PropTypes from 'prop-types';
 
 const Stat = styled.h2`
   margin-top: 30px;
@@ -58,4 +59,8 @@ export const Statistics = props => {
       )}
     </div>
   );
+};
+
+Statistics.propTypes = {
+  props: PropTypes.object,
 };
