@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { theme } from './theme';
-// import { StateComponents } from './App';
 
 const Stat = styled.h2`
   margin-top: 30px;
