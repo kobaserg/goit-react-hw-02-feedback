@@ -8,14 +8,20 @@ const Stat = styled.h2`
   font-weight: ${theme.fontWeights.normal};
 `;
 
-const Nostat = styled.h2`
+const Notstat = styled.h2`
   font-size: ${theme.fontSizes.l};
   font-weight: ${theme.fontWeights.bolt};
 `;
 
-const List = styled.ul``;
+const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Item = styled.li`
+  display: inline-flex;
+  width: 170px;
+  justify-content: space-between;
   margin-bottom: 10px;
   font-weight: ${theme.fontWeights.bolt};
 `;
@@ -25,14 +31,29 @@ export const Statistics = props => {
     <div>
       <Stat>Statistics</Stat>
       {props.total === 0 ? (
-        <Nostat>There is no feedback</Nostat>
+        <Notstat>There is no feedback</Notstat>
       ) : (
         <List>
-          <Item>Good : {props.good}</Item>
-          <Item>Neutral : {props.neutral}</Item>
-          <Item>Bad : {props.bad}</Item>
-          <Item>Total : {props.total}</Item>
-          <Item>Positive Feedback : {props.percent}%</Item>
+          <Item>
+            <span>Good :</span>
+            <span>{props.good}</span>
+          </Item>
+          <Item>
+            <span>Neutral :</span>
+            <span>{props.neutral}</span>
+          </Item>
+          <Item>
+            <span>Bad :</span>
+            <span>{props.bad}</span>
+          </Item>
+          <Item>
+            <span>Total : </span>
+            <span>{props.total}</span>
+          </Item>
+          <Item>
+            <span>Positive feedback :</span>
+            <span>{props.percent}%</span>
+          </Item>
         </List>
       )}
     </div>

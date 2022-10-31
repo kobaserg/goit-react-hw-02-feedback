@@ -7,7 +7,8 @@ export const theme = {
     xl: '64px',
   },
   colors: {
-    white: '#ffffff',
+    btnColorSweet: 'white',
+    btnColorDarc: 'black',
     text: 'rgba(16, 16, 16, 0.8)',
     accentText: 'rgba(240, 241, 231, 0.8)',
     btnBackground: 'rgba(57, 115, 174, 0.8)',
@@ -27,7 +28,7 @@ export const theme = {
   },
   radii: {
     none: '0',
-    normal: '5px',
+    normal: '4px',
     round: '50%',
   },
 };
